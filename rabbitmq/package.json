@@ -1,0 +1,17 @@
+{
+  "name": "rabbitmq-examples",
+  "version": "1.0.0",
+  "description": "RabbitMQ messaging examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "producer": "node basic-queue/producer.js",
+    "consumer": "node basic-queue/consumer.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

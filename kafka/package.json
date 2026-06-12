@@ -1,0 +1,16 @@
+{
+  "name": "kafka-examples",
+  "version": "1.0.0",
+  "description": "Kafka messaging examples",
+  "main": "index.js",
+  "scripts": {
+    "producer": "node producer/index.js",
+    "consumer": "node consumer/index.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

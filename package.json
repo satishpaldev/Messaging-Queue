@@ -1,0 +1,21 @@
+{
+  "name": "messaging-queue",
+  "version": "1.0.0",
+  "description": "RabbitMQ and Kafka messaging queue implementation",
+  "private": true,
+  "workspaces": [
+    "rabbitmq",
+    "kafka"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rabbitmq",
+    "kafka",
+    "messaging",
+    "queue"
+  ],
+  "author": "",
+  "license": "MIT"
+}

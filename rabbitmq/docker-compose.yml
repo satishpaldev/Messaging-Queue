@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:4.0-management-alpine
+    container_name: rabbitmq_container
+    ports:
+      - "5672:5672"      # AMQP port
+      - "15672:15672"    # Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - messaging
+
+volumes:
+  rabbitmq_data:
+
+networks:
+  messaging:
+    driver: bridge
